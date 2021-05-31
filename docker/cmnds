@@ -1,0 +1,51 @@
+-посмотреть активные образы
+docker images
+
+-посмотреть историю образа
+docker image history py_app
+
+-посмотреть активыне контейнеры
+docker ps (-l | -a)
+
+-собрать контейнер
+docker build -t 'process_name':'tag_name' 'catalog_path'
+docker build -t 'tag_name' 'catalog_path'
+
+-запустить остановленный контейнер
+docker start 'container_name'
+
+-запустить новый контейнер
+docker run 'process_name':'tag_name'
+docker run --name hello py_app
+docker run -d --rm py_app (-d Запустить как демон, --rm автоудаление после остановки)
+docker run --name web --rm -d -p 8080:8080 py_web
+docker run --name web -p 8085:8080 -e TZ=Asia/Irkutsk py_web
+docker run -it (interactive with pseudo tty)
+
+-остановить контейнер
+docker stop 'container_name'
+docker rmi  -f
+
+-- монитирование локальной папки в образ докера
+docker run (args...) -v 'physical_local_path:docker_image_path' 'image_name'
+docker run --name web -p 8085:8080 --rm -d -v $(pwd)/resources:/usr/src/app/resources py_web
+
+-виртуальные диски (docker volumes)
+docker volume ls
+docker volume create 'vol_name'
+docker run -v 'vol_name':'image_path' 'image_name'
+
+-удалть диск
+docker rm -f $(docker ps -a -q)
+docker volume rm $(docker volume ls -q)
+
+-подключиться к контейнеру
+docker exec -it <container_id> bash
+
+-удалить контейнер
+docker container prune
+docker container rm $(docker ps --filter status=exited -q)
+docker container stop $(docker container ls –aq) && docker system prune –af ––volumes
+
+-удалить образы
+docker image rm $(docker image ls -q)
