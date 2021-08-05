@@ -1,0 +1,10 @@
+total 14
+drwxrwxrwx 1 owpk users 4096 Aug  5 07:00 .
+drwxrwxrwx 1 owpk users 4096 Aug  4 22:52 ..
+-rwxrwxrwx 1 owpk users  471 Aug  5 08:18 file1.txt
+-rwxrwxrwx 1 owpk users    0 Aug  5 08:18 file2.txt
+-rwxrwxrwx 1 owpk users    0 Aug  5 08:18 file3.txt
+-rwxrwxrwx 1 owpk users  258 Aug  5 08:18 file.txt
+-rwxrwxrwx 1 owpk users 3668 Aug  5 08:18 scritps.sh
+-rwxrwxrwx 1 owpk users   26 Aug  5 07:00 secondscript.sh
+-rwxrwxrwx 1 owpk users   10 Aug  5 06:52 somefile.txt
